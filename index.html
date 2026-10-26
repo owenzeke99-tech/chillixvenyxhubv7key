@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080609">
+<title>Chilli X Venyx V7 Key</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --red: #ff183d;
+    --pink: #ff647e;
+    --dark: #080609;
+    --panel: rgba(20, 12, 18, .91);
+    --muted: #a99ba7;
+    --border: rgba(255, 43, 76, .22);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    color: #fff;
+    background: var(--dark);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+button, input {
+    font: inherit;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* BACKGROUND */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 50% 30%, #410818 0%, transparent 52%),
+        radial-gradient(ellipse at 5% 95%, #270610 0%, transparent 42%),
+        #080609;
+}
+
+.grid {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    top: -25%;
+    opacity: .2;
+    background-image:
+        linear-gradient(#ff183d18 1px, transparent 1px),
+        linear-gradient(90deg, #ff183d18 1px, transparent 1px);
+    background-size: 52px 52px;
+    transform: perspective(550px) rotateX(57deg);
+    animation: gridMove 18s linear infinite;
+}
+
+.glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: var(--red);
+    border-radius: 50%;
+    filter: blur(145px);
+    opacity: .15;
+    pointer-events: none;
+    animation: glowMove 9s ease-in-out infinite alternate;
+}
+
+.glow.one {
+    top: 0;
+    left: -180px;
+}
+
+.glow.two {
+    right: -180px;
+    bottom: -20px;
+    animation-delay: -4s;
+}
+
+#particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    bottom: -15px;
+    border-radius: 50%;
+    background: #ff536d;
+    box-shadow: 0 0 12px #ff183d;
+    animation: rise linear infinite;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: relative;
+    z-index: 10;
+    width: min(1120px, 92%);
+    margin: 0 auto;
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff0c;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: white;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #ff4963, #8b0019);
+    border: 1px solid #ff8596;
+    box-shadow: 0 0 25px #ff183d38;
+    transform: rotate(-5deg);
+    animation: logoPulse 3s ease-in-out infinite;
+}
+
+.brand-logo svg {
+    width: 30px;
+    height: 30px;
+    transform: rotate(5deg);
+}
+
+.brand-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .8px;
+    line-height: 1.6;
+}
+
+.brand-name span {
+    color: var(--pink);
+}
+
+.brand-caption {
+    margin-top: 3px;
+    color: #a394a0;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.version {
+    padding: 9px 12px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: #ff183d0c;
+    color: #ff91a3;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.menu-button {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #ffffff06;
+    color: white;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.menu-button:hover {
+    border-color: var(--red);
+    background: #ff183d15;
+    box-shadow: 0 0 20px #ff183d17;
+}
+
+.menu-button svg {
+    width: 21px;
+    height: 21px;
+}
+
+.menu-panel {
+    position: absolute;
+    top: 82px;
+    right: 0;
+    width: 220px;
+    padding: 9px;
+    border: 1px solid #ff183d45;
+    border-radius: 16px;
+    background: rgba(14, 9, 14, .97);
+    box-shadow: 0 20px 60px #000a;
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(.97);
+    transition: .25s ease;
+}
+
+.menu-panel.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.menu-panel a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 12px;
+    border-radius: 10px;
+    color: #d8ccd5;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.menu-panel a:hover {
+    background: #ff183d16;
+    color: white;
+}
+
+.menu-panel a span {
+    width: 20px;
+    color: var(--pink);
+    font-size: 17px;
+    text-align: center;
+}
+
+/* MAIN LAYOUT */
+
+main {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+.hero {
+    min-height: calc(100vh - 155px);
+    display: flex;
+    align-items: center;
+    padding: 55px 0 65px;
+}
+
+.hero-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 445px;
+    align-items: center;
+    gap: 58px;
+}
+
+/* TYPOGRAPHY */
+
+.intro {
+    animation: slideIn .8s ease both;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 13px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: #ff183d0c;
+    color: #ff9aaa;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.eyebrow-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--red);
+    box-shadow: 0 0 12px var(--red);
+    animation: blink 1.3s infinite;
+}
+
+h1 {
+    margin-top: 27px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(54px, 6.3vw, 78px);
+    font-weight: 900;
+    line-height: .96;
+    letter-spacing: -.7px;
+    text-transform: uppercase;
+}
+
+h1 .line-two {
+    display: block;
+    margin-top: 12px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: .69em;
+    font-weight: 900;
+    line-height: 1.35;
+    letter-spacing: -1.4px;
+    background: linear-gradient(
+        100deg,
+        #ff183d,
+        #ff8297,
+        #ffffff,
+        #ff4963,
+        #ff183d
+    );
+    background-size: 250% auto;
+    color: var(--pink);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleShine 7s linear infinite;
+}
+
+.description {
+    max-width: 450px;
+    margin-top: 24px;
+    color: #b6a9b3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.95;
+    letter-spacing: .1px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 27px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 12px;
+    border: 1px solid #ffffff10;
+    border-radius: 10px;
+    background: #ffffff05;
+    color: #e0d4dd;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.feature b {
+    color: var(--pink);
+    font-size: 15px;
+}
+
+/* KEY CARD */
+
+.key-card {
+    position: relative;
+    isolation: isolate;
+    padding: 28px;
+    border: 1px solid #ff183d45;
+    border-radius: 23px;
+    background: linear-gradient(145deg, #1b1119f5, #0c090ef7);
+    box-shadow: 0 25px 90px #0006,
+                0 0 55px #ff183d0b,
+                inset 0 1px #ffffff09;
+    animation: cardFloat 6s ease-in-out infinite;
+}
+
+.key-card::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    padding: 1px;
+    border-radius: 23px;
+    background: linear-gradient(
+        130deg,
+        #ff183d,
+        transparent 35%,
+        #ff496333 65%,
+        #8b0019
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                  linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #ffffff0d;
+}
+
+.card-heading {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.1px;
+}
+
+.card-subtitle {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.shield {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid #ff183d38;
+    border-radius: 13px;
+    background: #ff183d12;
+    color: var(--pink);
+}
+
+.shield svg {
+    width: 25px;
+    height: 25px;
+}
+
+.key-section {
+    margin-top: 24px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 11px;
+}
+
+.label-row label {
+    color: #d4c6d0;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.readonly-label {
+    color: #ff8296;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.key-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 11px;
+    border: 1px solid #51212b;
+    border-radius: 12px;
+    background: #070609;
+    transition: .3s;
+}
+
+.key-box:focus-within {
+    border-color: var(--red);
+    box-shadow: 0 0 20px #ff183d15;
+}
+
+#key {
+    width: 100%;
+    min-width: 0;
+    padding: 2px 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: #ff899c;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: -.25px;
+    font-variant-numeric: tabular-nums;
+}
+
+.copy-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid #ffffff14;
+    border-radius: 8px;
+    background: #ffffff08;
+    color: white;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.copy-icon:hover {
+    border-color: var(--red);
+    background: #ff183d20;
+}
+
+.copy-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.copy-button {
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+    padding: 16px 10px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 11px;
+    background: linear-gradient(105deg, #a80020, #ff183d, #c90027);
+    background-size: 200% 100%;
+    color: white;
+    box-shadow: 0 8px 28px #ff183d26;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    animation: buttonShine 5s linear infinite;
+    transition: .25s;
+}
+
+.copy-button::after {
+    content: "";
+    position: absolute;
+    top: -60%;
+    left: -90%;
+    width: 35%;
+    height: 220%;
+    background: #ffffff26;
+    transform: rotate(25deg);
+    transition: left .65s;
+}
+
+.copy-button:hover::after {
+    left: 140%;
+}
+
+.copy-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px #ff183d45;
+}
+
+.copy-button:active {
+    transform: scale(.98);
+}
+
+.copy-button span {
+    position: relative;
+    z-index: 1;
+}
+
+#message {
+    min-height: 18px;
+    margin-top: 12px;
+    color: #ff8196;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    text-align: center;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 17px;
+    padding-top: 17px;
+    border-top: 1px solid #ffffff0d;
+    color: #968995;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.secure {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.secure span {
+    color: var(--pink);
+}
+
+.card-version {
+    color: #ff8196;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .8px;
+}
+
+/* FOOTER */
+
+footer {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+    padding: 22px 0 28px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid #ffffff0d;
+    color: #857984;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .4px;
+}
+
+footer strong {
+    color: #ff647e;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* MOTION */
+
+@keyframes gridMove {
+    to { background-position: 0 104px; }
+}
+
+@keyframes glowMove {
+    to {
+        transform: translate(80px, 50px) scale(1.2);
+        opacity: .23;
+    }
+}
+
+@keyframes rise {
+    0% { transform: translateY(0); opacity: 0; }
+    10% { opacity: .8; }
+    90% { opacity: .6; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+@keyframes blink {
+    50% { opacity: .3; }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-22px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes cardFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+}
+
+@keyframes logoPulse {
+    0%, 100% { box-shadow: 0 0 18px #ff183d27; }
+    50% { box-shadow: 0 0 32px #ff183d65; }
+}
+
+@keyframes titleShine {
+    to { background-position: 250% center; }
+}
+
+@keyframes buttonShine {
+    to { background-position: 200% center; }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .hero {
+        min-height: auto;
+        padding: 55px 0 65px;
+    }
+
+    .hero-layout {
+        max-width: 540px;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .intro {
+        text-align: center;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .features {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: clamp(54px, 10vw, 75px);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 18px 0;
+    }
+
+    .brand {
+        gap: 9px;
+    }
+
+    .brand-logo {
+        width: 39px;
+        height: 39px;
+        border-radius: 12px;
+    }
+
+    .brand-name {
+        font-size: 10px;
+        letter-spacing: .4px;
+    }
+
+    .brand-caption {
+        font-size: 7px;
+        letter-spacing: 1.3px;
+    }
+
+    .nav-actions {
+        gap: 7px;
+    }
+
+    .version {
+        padding: 8px 9px;
+        font-size: 9px;
+    }
+
+    .menu-button {
+        width: 37px;
+        height: 37px;
+    }
+
+    .menu-panel {
+        top: 72px;
+        width: 205px;
+    }
+
+    .hero {
+        padding-top: 43px;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        letter-spacing: 1.4px;
+    }
+
+    h1 {
+        font-size: 57px;
+        letter-spacing: -.6px;
+    }
+
+    h1 .line-two {
+        font-size: .64em;
+        letter-spacing: -1px;
+    }
+
+    .description {
+        font-size: 13px;
+        line-height: 1.85;
+    }
+
+    .feature {
+        font-size: 10px;
+        padding: 9px 10px;
+    }
+
+    .key-card {
+        padding: 21px 16px;
+        border-radius: 19px;
+    }
+
+    .card-heading {
+        font-size: 12px;
+    }
+
+    #key {
+        font-size: 9px;
+        letter-spacing: -.35px;
+    }
+
+    .copy-button {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .card-footer {
+        font-size: 9px;
+    }
+
+    .card-version {
+        font-size: 8px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        line-height: 1.8;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background">
+    <div class="grid"></div>
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+    <div id="particles"></div>
+</div>
+
+<nav class="navbar">
+    <a class="brand" href="#home">
+        <div class="brand-logo">
+            <svg viewBox="0 0 48 48" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M28 5C29 13 25 16 19 22C12 29 13 39 23 42C35 44 42 32 37 22C36 29 31 31 29 29C37 20 34 11 28 5Z"
+                      fill="white"/>
+                <path d="M26 14C25 20 16 24 18 32C19 36 23 37 26 34C23 32 23 29 27 25C31 21 29 17 26 14Z"
+                      fill="#ff183d"/>
+                <path d="M28 7C34 6 37 9 38 13"
+                      stroke="white" stroke-width="2.5"
+                      stroke-linecap="round"/>
+                <path d="M31 7L35 4"
+                      stroke="white" stroke-width="2.5"
+                      stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <div>
+            <div class="brand-name">CHILLI X <span>VENYX</span></div>
+            <div class="brand-caption">OFFICIAL KEY SYSTEM</div>
+        </div>
+    </a>
+
+    <div class="nav-actions">
+        <span class="version">V7.0</span>
+
+        <button class="menu-button" id="menuButton"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="menuPanel">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round">
+                <path d="M4 7H20M4 12H20M4 17H20"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="menu-panel" id="menuPanel">
+        <a href="#home"><span>⌂</span> Home</a>
+        <a href="#key-section"><span>◇</span> Get Your Key</a>
+        <a href="#features"><span>✦</span> Features</a>
+        <a href="#footer"><span>ⓘ</span> About</a>
+    </div>
+</nav>
+
+<main id="home">
+    <section class="hero">
+        <div class="hero-layout">
+
+            <div class="intro">
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    NEXT GENERATION KEY SYSTEM
+                </div>
+
+                <h1>
+                    CHILLI X
+                    <span class="line-two">VENYX V7</span>
+                    KEY SYSTEM
+                </h1>
+
+                <p class="description">
+                    Welcome to the official Chilli X Venyx V7
+                    Key System. Access your key through a sleek,
+                    next-generation interface built for speed
+                    and simplicity.
+                </p>
+
+                <div class="features" id="features">
+                    <div class="feature"><b>✦</b> Modern Interface</div>
+                    <div class="feature"><b>◇</b> One-Click Copy</div>
+                    <div class="feature"><b>⚡</b> Quick Access</div>
+                </div>
+            </div>
+
+            <div class="key-card" id="key-section">
+                <div class="card-top">
+                    <div>
+                        <div class="card-heading">ACCESS PORTAL</div>
+                        <div class="card-subtitle">
+                            Your personal access key
+                        </div>
+                    </div>
+
+                    <div class="shield">
+                        <svg viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.6"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="key-section">
+                    <div class="label-row">
+                        <label for="key">YOUR ACCESS KEY</label>
+                        <span class="readonly-label">● READY</span>
+                    </div>
+
+                    <div class="key-box">
+                        <input
+                            id="key"
+                            type="text"
+                            value="ChilliXVenyxHubV7KywosjskieehLlaowiejejLajowowieplalw"
+                            readonly
+                            spellcheck="false"
+                            aria-label="Your access key">
+
+                        <button class="copy-icon" id="copyIcon"
+                                aria-label="Copy key"
+                                title="Copy key">
+                            <svg viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="1.8"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <rect x="8" y="8" width="12" height="12" rx="2"/>
+                                <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <button class="copy-button" id="copyButton">
+                        <span>▢ &nbsp; COPY ACCESS KEY &nbsp; ↗</span>
+                    </button>
+
+                    <p id="message" role="status" aria-live="polite"></p>
+                </div>
+
+                <div class="card-footer">
+                    <div class="secure"><span>●</span> Key displayed locally</div>
+                    <div class="card-version">VERSION 7.0</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer id="footer">
+    <div>© 2026 <strong>CHILLI X VENYX</strong></div>
+    <div>DESIGNED FOR THE NEXT GENERATION</div>
+</footer>
+
+<script>
+const keyInput = document.getElementById('key');
+const message = document.getElementById('message');
+const copyButton = document.getElementById('copyButton');
+const copyIcon = document.getElementById('copyIcon');
+const menuButton = document.getElementById('menuButton');
+const menuPanel = document.getElementById('menuPanel');
+
+async function copyKey() {
+    const key = keyInput.value;
+
+    try {
+        if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(key);
+        } else {
+            keyInput.focus();
+            keyInput.select();
+            keyInput.setSelectionRange(0, key.length);
+
+            if (!document.execCommand('copy')) {
+                throw new Error('Copy unavailable');
+            }
+        }
+
+        message.textContent = '✓ KEY COPIED SUCCESSFULLY!';
+        copyButton.querySelector('span').textContent =
+            '✓  KEY COPIED SUCCESSFULLY';
+
+    } catch (error) {
+        keyInput.focus();
+        keyInput.select();
+        keyInput.setSelectionRange(0, key.length);
+        message.textContent =
+            'Select the key above and copy it manually.';
+    }
+}
+
+copyButton.addEventListener('click', copyKey);
+copyIcon.addEventListener('click', copyKey);
+
+menuButton.addEventListener('click', () => {
+    const open = menuPanel.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(open));
+});
+
+menuPanel.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuPanel.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+    });
+});
+
+document.addEventListener('click', event => {
+    if (!menuPanel.contains(event.target) &&
+        !menuButton.contains(event.target)) {
+        menuPanel.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+    }
+});
+
+/* Animated neon particles */
+const particleContainer = document.getElementById('particles');
+
+for (let i = 0; i < 42; i++) {
+    const particle = document.createElement('span');
+    particle.className = 'particle';
+
+    const size = 1 + Math.random() * 3;
+
+    particle.style.width = size + 'px';
+    particle.style.height = size + 'px';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.animationDuration =
+        (7 + Math.random() * 13) + 's';
+    particle.style.animationDelay =
+        (-Math.random() * 20) + 's';
+    particle.style.opacity = .25 + Math.random() * .65;
+
+    particleContainer.appendChild(particle);
+}
+</script>
+
+</body>
+</html>
